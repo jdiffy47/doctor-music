@@ -1,0 +1,36 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+<h1>Exercises</h1>
+<% if (user) { %>
+  <h2>Add a Exercise!</h2>
+  <form action="/exercises" method="POST">
+    <label>
+      Name:
+      <input type="text" name="name" autocomplete="off">
+    </label>
+    <button type="submit">Add Exercise</button>
+  </form>
+<% } %> 
+<ul>
+  <% exercises.forEach(exercise => { %>
+    <li><%= exercise.name %></li>
+  <% }) %> 
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<%- include('../partials/footer') %>
