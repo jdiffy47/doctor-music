@@ -2,28 +2,34 @@
 <%- include('../partials/nav') %>
 
 <section>
-<h1>Exercises</h1>
+<h1>aiiight List whatchu got !</h1>
 <% if (user) { %>
-  <h2>Create an Exercise</h2>
-  <form action="/exercises" method="POST">
+  <h2>Create a "Post"</h2>
+  <form action="/posts" method="POST">
     <label>
       Name:
       <input type="text" name="name" autocomplete="off">
     </label>
     <label>
+      Price:
+      <input type="text" name="price" autocomplete="off">
+    </label>
+    <label>
       Description:
       <input type="text" name="description" autocomplete="off">
     </label>
-    <button type="submit">Add Exercise</button>
+    <button type="submit">Add yo "Post"</button>
   </form>
 <% } %> 
-<h2>The Exercises</h2>
+<h2>The "Posts"</h2>
 <ul>
-  <% exercises.forEach(exercise => { %>
+  <% posts.forEach(post => { %>
     <li>
-      <a href="/exercises/<%= exercise._id %>">
-        <%= exercise.name %>
+      <a href="/posts/<%= post._id %>">
+        <%= post.name %>
       </a>
+      $<%= post.price %>
+      <p><%= post.description %></p>
     </li>
   <% }) %> 
 </ul>

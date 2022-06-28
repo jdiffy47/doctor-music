@@ -1,16 +1,16 @@
 import { Router } from 'express'
-import * as exercisesCtrl from '../controllers/exercises.js'
+import * as postsCtrl from '../controllers/posts.js'
 import { isLoggedIn } from '../middleware/middleware.js'
 
 const router = Router()
 
-router.get('/', exercisesCtrl.index)
+router.get('/', postsCtrl.index)
 
-router.get('/:id', exercisesCtrl.show)
+router.get('/:id', postsCtrl.show)
 
 // router.get('/:id/edit', isLoggedIn, exercisesCtrl.edit)
 
-router.post('/', isLoggedIn, exercisesCtrl.create)
+router.post('/', isLoggedIn, postsCtrl.create)
 
 // router.post('/:id', exercisesCtrl.add)
 
