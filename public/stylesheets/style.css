@@ -64,7 +64,7 @@ h1 {
 #exercise-card {
   background-color: blue;
   color: #fff;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   /* flex-basis: auto; */
   margin: 5px;
   

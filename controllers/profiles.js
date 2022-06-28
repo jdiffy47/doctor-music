@@ -45,5 +45,6 @@ function createExercise(req, res) {
 
 export {
   index,
-  show
+  show,
+  createExercise
 }

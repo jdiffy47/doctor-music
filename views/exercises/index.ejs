@@ -17,10 +17,12 @@
   <% exercises.forEach(exercise => { %>
     <div class="card-container">
       <div id="exercise-card">
-        <p><%= exercise.name %></p>
-        <form action="/exercises/<%= exercise._id %>/add" method="POST">
+        <p>
+        <%= exercise.name %>
+        </p>
+        <a href="/exercises<%= exercise._id %>"<%= exercise.name %>>
         <button type="submit">Add to Profile</button>
-        </form>
+        </a>
       </div>
     </div>
   <% }) %> 

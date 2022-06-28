@@ -29,8 +29,18 @@ function addToProfile(req, res){
   
 }
 
+function show(req, res) {
+  Exercise.findById(req.params.id)
+  .then(exercise => {
+    res.render('exercise/show', {
+      exercise
+    })
+  })
+}
+
 export { 
   index,
   create,
-  addToProfile as add
+  addToProfile as add,
+  show
 }
