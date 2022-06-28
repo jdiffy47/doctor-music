@@ -1,5 +1,4 @@
 import { Exercise } from '../models/exercise.js'
-import { isLoggedIn } from '../middleware/middleware.js'
 
 
 
@@ -10,7 +9,10 @@ function index(req, res) {
       exercises,
     })
   })
-  
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 function create(req, res) {
@@ -25,22 +27,21 @@ function create(req, res) {
     })
 }
 
-function addToProfile(req, res){
-  
-}
-
 function show(req, res) {
   Exercise.findById(req.params.id)
   .then(exercise => {
-    res.render('exercise/show', {
+    res.render('exercises/show', {
       exercise
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/exercises')
   })
 }
 
 export { 
   index,
   create,
-  addToProfile as add,
   show
 }

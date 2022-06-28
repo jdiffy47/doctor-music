@@ -10,23 +10,26 @@
       Name:
       <input type="text" name="name" autocomplete="off">
     </label>
+    <label>
+      Description:
+      <input type="text" name="description" autocomplete="off">
+    </label>
     <button type="submit">Add Exercise</button>
   </form>
 <% } %> 
+<h2>The Exercises</h2>
 <ul>
   <% exercises.forEach(exercise => { %>
-    <div class="card-container">
-      <div id="exercise-card">
-        <p>
+    <li>
+      <a href="/exercises/<%= exercise._id %>">
         <%= exercise.name %>
-        </p>
-        <a href="/exercises<%= exercise._id %>"<%= exercise.name %>>
-        <button type="submit">Add to Profile</button>
-        </a>
-      </div>
-    </div>
+      </a>
+    </li>
   <% }) %> 
 </ul>
+</section>
+
+<%- include('../partials/footer') %>
 
 
 

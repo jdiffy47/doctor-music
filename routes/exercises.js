@@ -8,11 +8,11 @@ router.get('/', exercisesCtrl.index)
 
 router.get('/:id', exercisesCtrl.show)
 
-router.get('/:id/edit', isLoggedIn, exercisesCtrl.edit)
+// router.get('/:id/edit', isLoggedIn, exercisesCtrl.edit)
 
 router.post('/', isLoggedIn, exercisesCtrl.create)
 
-router.post('/:id', exercisesCtrl.add)
+// router.post('/:id', exercisesCtrl.add)
 
 
 
