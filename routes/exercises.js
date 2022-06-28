@@ -8,7 +8,7 @@ router.get('/', exercisesCtrl.index)
 
 router.post('/', isLoggedIn, exercisesCtrl.create)
 
-
+router.post('/:id', exercisesCtrl.add)
 
 export {
   router

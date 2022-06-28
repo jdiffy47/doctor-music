@@ -25,7 +25,12 @@ function create(req, res) {
     })
 }
 
+function addToProfile(req, res){
+  
+}
+
 export { 
   index,
-  create
+  create,
+  addToProfile as add
 }
