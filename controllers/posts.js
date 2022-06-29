@@ -53,9 +53,17 @@ function edit(req, res) {
 function update(req, res) {
   Post.findById(req.params.id)
   .then(post => {
-    
+    if (post.owner.equals(req.user.profile._id)) {
+    post.updateOne(req.body, {new: true})
+    .then(updatedPost => {
+      res.redirect(`/posts/${post._id}`)
+    })
+  } else {
+    throw new Error ('NOT ALLOWED BRO')
+  }
   })
 }
+
 
 function createComment(req, res) {
   Post.findById(req.params.id)
@@ -77,5 +85,6 @@ export {
   create,
   show,
   edit,
-  createComment
+  createComment,
+  update
 }
