@@ -1,26 +1,20 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-
-<!-- <section>
-  <% if (isSelf) { %>
+<section>
   <h1>Edit yo Post</h1>
-
-</section> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
+    <label>
+      Name:
+      <input type="text" name="name" value="<%= post.name %>" autocomplete="off">
+        </label>
+        <label>
+          Price:
+          <input type="text" name="price" value="<%=post.price %>"
+          autocomplete="off">
+        </label>
+        <button type="submit">Edit tyoo Post</button>
+      </form>
+    </section>
 
 <%- include('../partials/footer') %>

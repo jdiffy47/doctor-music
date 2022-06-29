@@ -1,22 +1,19 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section>
-  <h1><%= post.name %></h1>
-  <p>From <%= post.owner.name %></p>
-  <p>$<%= post.price %></p>
-  <h3><%= post.description %></h3>
-  <% if (user) { %>
-    <form action="/posts" method="POST">
-      <input type="text">
-      <button type="submit">Leave Comment</button>
+<main>
+  <section>
+   <p>From <%= post.owner.name %></p>
+   <h1><%= post.name %></h1>
+   <h3><%= post.price %></h3>
+   <p><%= post.description %></p>
+   <% if (post.owner.equals(user?.profile.id)) { %>
+    <form action="/posts/<%= post._id %>/edit" method="GET">
+      <button type="submit">Edit this Post</button>
     </form>
-  <% } %>
-  <h2>Potential Offers</h2>
-  <ul>
-    <%  %> 
-  </ul>
-</section>
+   <% } %>    
+  </section>
+</main>
 
 
 

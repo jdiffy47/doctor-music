@@ -12,6 +12,11 @@ router.get('/:id/edit', isLoggedIn, postsCtrl.edit)
 
 router.post('/', isLoggedIn, postsCtrl.create)
 
+router.put('/:id', isLoggedIn, postsCtrl.update)
+
+
+router.post('/:id', postsCtrl.createComment)
+
 // router.patch('/:id/leave-comment', isLoggedIn, postsCtrl.leaveComment)
 
 // router.post('/:id', exercisesCtrl.add)

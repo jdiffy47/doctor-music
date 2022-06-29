@@ -50,16 +50,32 @@ function edit(req, res) {
   })
 }
 
-// function leaveComment(req, res) {
-//   Post.findById(req.params.id)
-//   .then(post => {
+function update(req, res) {
+  Post.findById(req.params.id)
+  .then(post => {
+    
+  })
+}
 
-//   })
-// }
+function createComment(req, res) {
+  Post.findById(req.params.id)
+    .then(post => {
+      post.comments.push(req.body)
+      post.save()
+        .then(() => {
+          res.redirect(`/movies/${post._id}`)
+        })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect("/")
+    })
+}
 
 export { 
   index,
   create,
   show,
-  edit
+  edit,
+  createComment
 }

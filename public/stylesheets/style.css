@@ -52,6 +52,13 @@ h1 {
   font-size: 5vw;
 }
 
+#index-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .card-container {
   display: flex;
   flex-direction: row;

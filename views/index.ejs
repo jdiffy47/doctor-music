@@ -1,8 +1,16 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
-<main>
-  <h1>Ayo, you need sumthin ?</h1>
+<main id="index-main">
+  <% if(user) { %>
+    <h3>Let's be real...</h3>
+    <p>people be talkin' too much</p>
+    <h3>The "Rules"</h3>
+  <% } else { %>  
+  <p>WELCOME TO</p>
+  <h1>Hush Hush 🤫</h1>
+  <h3>We strive on minding our own business</h3>
+  <% } %> 
 </main>
 
 <%- include('./partials/footer') %>
