@@ -29,6 +29,7 @@ function create(req, res) {
 
 function show(req, res) {
   Post.findById(req.params.id)
+  .populate('owner')
   .then(post => {
     res.render('posts/show', {
       post
@@ -40,8 +41,25 @@ function show(req, res) {
   })
 }
 
+function edit(req, res) {
+  Post.findById(req.params.id)
+  .then(post => {
+    res.render('posts/edit', {
+      post
+    })
+  })
+}
+
+// function leaveComment(req, res) {
+//   Post.findById(req.params.id)
+//   .then(post => {
+
+//   })
+// }
+
 export { 
   index,
   create,
-  show
+  show,
+  edit
 }

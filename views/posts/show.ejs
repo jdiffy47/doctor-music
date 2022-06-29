@@ -3,6 +3,19 @@
 
 <section>
   <h1><%= post.name %></h1>
+  <p>From <%= post.owner.name %></p>
+  <p>$<%= post.price %></p>
+  <h3><%= post.description %></h3>
+  <% if (user) { %>
+    <form action="/posts" method="POST">
+      <input type="text">
+      <button type="submit">Leave Comment</button>
+    </form>
+  <% } %>
+  <h2>Potential Offers</h2>
+  <ul>
+    <%  %> 
+  </ul>
 </section>
 
 

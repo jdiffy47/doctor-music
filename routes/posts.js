@@ -8,9 +8,11 @@ router.get('/', postsCtrl.index)
 
 router.get('/:id', postsCtrl.show)
 
-// router.get('/:id/edit', isLoggedIn, exercisesCtrl.edit)
+router.get('/:id/edit', isLoggedIn, postsCtrl.edit)
 
 router.post('/', isLoggedIn, postsCtrl.create)
+
+// router.patch('/:id/leave-comment', isLoggedIn, postsCtrl.leaveComment)
 
 // router.post('/:id', exercisesCtrl.add)
 
