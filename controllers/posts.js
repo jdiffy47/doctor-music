@@ -64,6 +64,24 @@ function update(req, res) {
   })
 }
 
+function deletePost(req, res) {
+  Post.findById(req.params.id)
+    .then(post => {
+      if (post.owner.equals(req.user.profile._id)) {
+        post.delete()
+          .then(() => {
+            res.redirect('/posts')
+          })
+      } else {
+        throw new Error('Not today brotha')
+      }
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/posts')
+    })
+}
+
 
 function createComment(req, res) {
   Post.findById(req.params.id)
@@ -86,5 +104,6 @@ export {
   show,
   edit,
   createComment,
-  update
+  update,
+  deletePost as delete
 }

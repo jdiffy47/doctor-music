@@ -14,6 +14,8 @@ router.post('/', isLoggedIn, postsCtrl.create)
 
 router.put('/:id', isLoggedIn, postsCtrl.update)
 
+router.delete('/:id', isLoggedIn, postsCtrl.delete)
+
 
 router.post('/:id', postsCtrl.createComment)
 

@@ -28,23 +28,23 @@ function show(req, res) {
   })
 }
 
-function createExercise(req, res) {
+function createProfileDeeds(req, res) {
   Profile.findById(req.user.profile._id)
-  .then(profile => {
-    profile.profileExercise.push(req.body)
-    profile.save()
-    .then(() => {
+    .then(profile => {
+      profile.profileDeeds.push(req.body)
+      profile.save()
+        .then(() => {
+          res.redirect(`/profiles/${req.user.profile._id}`)
+        })
+    })
+    .catch(err => {
+      console.log(err)
       res.redirect(`/profiles/${req.user.profile._id}`)
     })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect(`/profiles/${req.user.profile._id}`)
-  })
 }
 
 export {
   index,
   show,
-  createExercise
+  createProfileDeeds
 }

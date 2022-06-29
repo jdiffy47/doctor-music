@@ -8,7 +8,7 @@ router.get('/', isLoggedIn, profilesCtrl.index)
 
 router.get('/:id', isLoggedIn, profilesCtrl.show)
 
-router.post('/:id/profileExercise', isLoggedIn, profilesCtrl.createExercise)
+router.post('/:id/profileDeeds', isLoggedIn, profilesCtrl.createProfileDeeds)
 
 export {
   router

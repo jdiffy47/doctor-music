@@ -3,15 +3,18 @@
 
 <main>
   <section>
-   <p>From <%= post.owner.name %></p>
-   <h1><%= post.name %></h1>
-   <h3><%= post.price %></h3>
-   <p><%= post.description %></p>
-   <% if (post.owner.equals(user?.profile.id)) { %>
+  <p>From <%= post.owner.name %></p>
+  <h1><%= post.name %></h1>
+  <h3><%= post.price %></h3>
+  <p><%= post.description %></p>
+  <% if (post.owner.equals(user?.profile.id)) { %>
     <form action="/posts/<%= post._id %>/edit" method="GET">
       <button type="submit">Edit this Post</button>
     </form>
-   <% } %>    
+    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete yoo Post</button>
+    </form>
+  <% } %>    
   </section>
 </main>
 
