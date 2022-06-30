@@ -2,11 +2,12 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <section>
-  <p>From <%= post.owner.name %></p>
-  <h1><%= post.name %></h1>
-  <h3><%= post.price %></h3>
-  <p><%= post.description %></p>
+  <section id="post-detail-page">
+  <p id="owner-name">From <%= post.owner.name %></p>
+  <h1 id="post-name"><%= post.name %></h1>
+  <h2 id="down-arrow">⬇️</h2>
+  <h3 id="post-price">$<%= post.price %></h3>
+  <p id="post-descriptioin"><%= post.description %></p>
   <% if (post.owner.equals(user?.profile.id)) { %>
     <form action="/posts/<%= post._id %>/edit" method="GET">
       <button type="submit">Edit this Post</button>

@@ -5,6 +5,7 @@
 <body>
   <nav>
     <% if (user) { %>
+      <div id="after-login-nav">
       <a href="/posts">
         <button type="submit">Stuff</button>
       </a>
@@ -14,6 +15,7 @@
       <a href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
+      </div>
     <% } else { %>
       <a id ="login-navbar" href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">

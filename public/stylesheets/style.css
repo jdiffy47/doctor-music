@@ -36,32 +36,99 @@ nav > a {
   
 }
 
+/* before login style */
+  #index-login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #073b4c;
+    color: #ef476f
+  }
 
-#index-login-container {
+  #terms-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px;
+    font-size: 12px;
+  }
+
+  #last-p {
+    font-size: 8px;
+  }
+/* before login style */
+
+/* after login style */
+#loggedin-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #073b4c;
-  color: #ef476f
+  background-color: #ef476f;
 }
 
-#terms-container {
+#after-login-nav {
+
+}
+
+#after-login-nav > a > button {
+  padding: 15px;
+}
+
+
+#post-page {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  margin: 20px;
-  font-size: 12px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-#last-p {
-  font-size: 8px;
+#post-page > ul {
+  background-color: #06d6a0;
+  padding: 15px;
+  list-style: none;
+}
+
+#post-detail-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#owner-name {
+  font-size: 20px;
+  background-color: #ef476f;
+  color: #fff;
+  padding: 5px;
+}
+
+#post-name {
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+  color: #fff;
+  margin-bottom: 0;
+}
+
+#post-price {
+  border: groove 3px #06d6a0;
+  padding: 5px;
+  margin-bottom: 0;
+}
+
+#down-arrow {
+  font-size: 50px;
+  margin: 0;
+}
+
+#post-description {
+  font-size: 20px;
 }
 
 /* main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 } */
 
 h1 {
