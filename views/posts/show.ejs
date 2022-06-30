@@ -1,19 +1,19 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<main>
-  <section id="post-detail-page">
+<main id="post-detail-page">
+  <section>
   <p id="owner-name">From <%= post.owner.name %></p>
   <h1 id="post-name"><%= post.name %></h1>
   <h2 id="down-arrow">⬇️</h2>
   <h3 id="post-price">$<%= post.price %></h3>
-  <p id="post-descriptioin"><%= post.description %></p>
+  <p id="post-description"><%= post.description %></p>
   <% if (post.owner.equals(user?.profile.id)) { %>
     <form action="/posts/<%= post._id %>/edit" method="GET">
-      <button type="submit">Edit this Post</button>
+      <button class="posts-btn" type="submit">Edit this Post</button>
     </form>
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-      <button type="submit">Delete yoo Post</button>
+      <button class="posts-btn" type="submit">Delete yoo Post</button>
     </form>
   <% } %>    
   </section>
@@ -22,11 +22,14 @@
 
     <label>Comment:</label>
     <textarea name="content"></textarea>
-    <button type="submit">Add your Comment</button>
+    <br>
+    <button class="posts-btn" type="submit">Add your Comment</button>
   </form>
+  <ul>
   <% post.comments.forEach(comment => { %>
-    <%= comment.content %>
+    <li><%= comment.content %></li>
   <% }) %> 
+  </ul>
 </main>
 
 
