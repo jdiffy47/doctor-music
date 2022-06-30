@@ -28,10 +28,10 @@ function show(req, res) {
   })
 }
 
-function createProfileDeeds(req, res) {
+function createDetails(req, res) {
   Profile.findById(req.user.profile._id)
     .then(profile => {
-      profile.profileDeeds.push(req.body)
+      profile.details.push(req.body)
       profile.save()
         .then(() => {
           res.redirect(`/profiles/${req.user.profile._id}`)
@@ -46,5 +46,5 @@ function createProfileDeeds(req, res) {
 export {
   index,
   show,
-  createProfileDeeds
+  createDetails
 }
