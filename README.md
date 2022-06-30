@@ -9,7 +9,7 @@ Link to my [Trello](https://trello.com/b/911WCX53/lifestyle-app)
 
 ## Screenshot
 
-![landing page](assets/img/landing-page-snippet.jpg)
+![landing page](https://i.imgur.com/ScbK6gN.jpg)
 
 ## Technologies Used
 
