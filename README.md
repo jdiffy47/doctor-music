@@ -26,3 +26,4 @@ Link to my [Trello](https://trello.com/b/911WCX53/lifestyle-app)
 
 - AAU, I can change the display name for my profile.
 - AAU, I can send direct messages to people instead of posting personal info on the posts page
+
