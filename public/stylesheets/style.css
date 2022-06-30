@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background-color: gray;
+  background-color: #ffd166;
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -25,9 +25,10 @@ body {
 nav {
   display: flex;
   justify-content: flex-start;
-  background-color: #264653;
-  padding: 20px;
+  background-color: #118ab2;
+  padding: 25px;
   width: 100%;
+  border: solid 6px #06d6a0
 }
 
 nav > a {
@@ -35,17 +36,25 @@ nav > a {
   
 }
 
-a > button {
-  padding: 5px 8px;
-  font-size: 15px;
-  font-weight: 500;
-}
 
-main {
+#index-login-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  background-color: #073b4c;
+  color: #ef476f
 }
+
+#terms-container {
+  display: flex;
+}
+
+/* main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
 
 h1 {
   text-align: center;

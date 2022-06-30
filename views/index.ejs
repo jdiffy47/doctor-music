@@ -1,15 +1,23 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
-<main id="index-main">
+<main>
   <% if(user) { %>
-    <h3>Let's be real...</h3>
-    <p>people be talkin' too much</p>
-    <h3>The "Rules"</h3>
+    <div id="loggedin-container">
+      <h3>Let's be real...</h3>
+      <p>people be talkin' too much</p>
+      <h3>The "Rules"</h3>
+    </div>
   <% } else { %>  
-  <p>WELCOME TO</p>
-  <h1>Hush Hush 🤫</h1>
-  <h3>We strive on minding our own business</h3>
+  <div id="index-login-container">
+    <p>WELCOME TO</p>
+    <h1>Hush Hush 🤫</h1>
+    <h3>[ We strive on minding our own business ]</h3>
+  </div>
+  <div id="terms-container">
+  <p>By logging in you accept our TERMS and CONDITIONS</p>
+  <p id="last-p">The TERMS yo: basically you just can't talk about the site to the wrong people. Kind of like fight club, ya feels?</p>
+  </div>
   <% } %> 
 </main>
 
