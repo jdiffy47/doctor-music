@@ -1,8 +1,12 @@
 # The HushHush App!
 ### This app is for anyone wanting to post their products or things they might have for sale.
 
+## Getting Started
 
-[Deploy](https://hushhush-app.herokuapp.com/)
-[Trello](https://trello.com/b/911WCX53/lifestyle-app)
+Link to my [Deploy](https://hushhush-app.herokuapp.com/)
 
-	![landing page](https://i.imgur.com/YLrDGA8.jpg)
+Link to my [Trello](https://trello.com/b/911WCX53/lifestyle-app)
+
+## Screenshot
+
+	![landing page](assets/img/landing-page-snippet.jpg)
