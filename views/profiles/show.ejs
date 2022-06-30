@@ -4,7 +4,7 @@
 <main>
   <% if (profile.avatar) { %>
     <div>
-    <img 
+      <img 
       class="profile-avatar" 
       src="<%= profile.avatar %>" 
       alt="<%= profile.name %> avatar"
@@ -23,9 +23,15 @@
           um wut makes u HAPPY?😊
           <input type="text" name="happy" autocomplete="off">
         </label>
-        <button type="submit">Add yoo Info my luv</button>
+        <button type="submit">Add yoo Info</button>
       </form> 
     <% } %>
+    <% profile.details.forEach(detail => { %>
+      <h3>
+        <%= detail.age %>
+        <%= detail.happy %>   
+      </h3> 
+    <% }) %> 
 </main>
 
 <%- include('../partials/footer') %>
