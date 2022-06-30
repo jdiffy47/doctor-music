@@ -4,7 +4,6 @@ const Schema = mongoose.Schema
 
 const commentSchema = new Schema({
   content: String,
-  price: Number
 }, {
   timestamps: true
 })

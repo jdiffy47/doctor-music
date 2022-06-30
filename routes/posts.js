@@ -17,7 +17,7 @@ router.put('/:id', isLoggedIn, postsCtrl.update)
 router.delete('/:id', isLoggedIn, postsCtrl.delete)
 
 
-router.post('/:id', postsCtrl.createComment)
+router.post('/:id/comments', postsCtrl.createComment)
 
 // router.patch('/:id/leave-comment', isLoggedIn, postsCtrl.leaveComment)
 
