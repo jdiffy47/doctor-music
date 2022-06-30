@@ -26,12 +26,14 @@
         <button type="submit">Add yoo Info</button>
       </form> 
     <% } %>
+    <ul>
     <% profile.details.forEach(detail => { %>
       <h3>
-        <%= detail.age %>
-        <%= detail.happy %>   
+        <li>My Fake age is: <%= detail.age %></li>
+        <li>What makes me happy: <%= detail.happy %></li>
       </h3> 
     <% }) %> 
+    </ul>
 </main>
 
 <%- include('../partials/footer') %>
