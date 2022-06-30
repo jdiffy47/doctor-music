@@ -16,6 +16,16 @@
     </form>
   <% } %>    
   </section>
+  <h2>Potential Buyers</h2>
+  <form action="/posts/<%= post._id %>/comments" method="POST">
+
+    <label>Comment:</label>
+    <textarea name="content"></textarea>
+    <button type="submit">Add your Comment</button>
+  </form>
+  <% post.comments.forEach(comment => { %>
+    <%= comment.content %>
+  <% }) %> 
 </main>
 
 

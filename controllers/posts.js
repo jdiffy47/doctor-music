@@ -89,12 +89,8 @@ function createComment(req, res) {
       post.comments.push(req.body)
       post.save()
         .then(() => {
-          res.redirect(`/movies/${post._id}`)
+          res.redirect(`/posts/${post._id}`)
         })
-    })
-    .catch(err => {
-      console.log(err)
-      res.redirect("/")
     })
 }
 
