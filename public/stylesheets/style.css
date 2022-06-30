@@ -48,6 +48,14 @@ nav > a {
 
 #terms-container {
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 20px;
+  font-size: 12px;
+}
+
+#last-p {
+  font-size: 8px;
 }
 
 /* main {
